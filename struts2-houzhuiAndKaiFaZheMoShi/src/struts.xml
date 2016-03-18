@@ -1,0 +1,23 @@
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- <constant name="struts.devMode" value="true"></constant> 当指定struts.devMode为true是为开发者模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+
+
+	<!-- 当<constant name="struts.action.extension" value="fff"></constant> 没有配置的时候 
+		，后缀没有加上 .action也是可以的，加上struts.action.extension后就可以随意指定后缀名称， 
+		当<constant name="struts.action.extension" value=""></constant>中的value为空时是不指定后缀名称 -->
+	<constant name="struts.action.extension" value="fff"></constant>
+
+
+	<package name="helloWord" extends="struts-default">
+		<action name="helloWordAction"
+			class="cn.javass.hello.struts2impl.action.HelloWordActin">
+			<result name="success">hello.jsp</result>
+			<result name="toWelcome">/servletimpl/welcome.jsp</result>
+		</action>
+	</package>
+
+</struts> 
